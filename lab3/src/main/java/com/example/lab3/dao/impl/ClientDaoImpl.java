@@ -41,20 +41,9 @@ public class ClientDaoImpl implements PersonDao<Client, Long> {
     }
 
     @Override
-    public List findAllPersons() {
+    public List<Client> findAllPersons() {
 
         return entityManager.createQuery("select c from Client c").getResultList();
     }
 
-    @Override
-    public Client findPersonById(Long id) {
-
-        return entityManager.find(Client.class, id);
-    }
-
-    @Override
-    public Client findPersonByName(String firstName) {
-        return entityManager.find(Client.class, firstName);
-    }
- 
 }

@@ -7,7 +7,6 @@ import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 import com.example.lab3.dao.PersonDao;
-import com.example.lab3.entities.Client;
 import com.example.lab3.entities.Staff;
 
 import org.springframework.stereotype.Repository;
@@ -42,21 +41,10 @@ public class StaffDaoImpl implements PersonDao<Staff,Long> {
     }
 
     @Override
-    public List findAllPersons() {
+    public List<Staff> findAllPersons() {
 
         return entityManager.createQuery("select st from staff st").getResultList();
     }
 
-    @Override
-    public Client findPersonById(Long id) {
-
-        return entityManager.find(Client.class, id);
-    }
-
-    @Override
-    public Client findPersonByName(String firstName) {
-        return entityManager.find(Client.class, firstName);
-    }
- 
     
 }

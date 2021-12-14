@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-
+//???
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -16,16 +16,9 @@ import javax.persistence.Id;
 public class Client {
     @Id
     @GeneratedValue( strategy= GenerationType.IDENTITY )
-    @Getter
     protected Long id;
-    @Getter
-    @Setter
     protected String username;
-    @Getter
-    @Setter
     protected String firstName;
-    @Getter
-    @Setter
     private String lastName;
 
   

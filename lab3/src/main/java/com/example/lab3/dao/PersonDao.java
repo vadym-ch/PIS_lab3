@@ -2,7 +2,6 @@ package com.example.lab3.dao;
 
 import java.util.List;
 
-import com.example.lab3.entities.Client;
 
 public interface PersonDao<T, I> {
     
@@ -12,11 +11,7 @@ public interface PersonDao<T, I> {
 
     void updatePerson(T I);
 
-    List findAllPersons();
-
-    Client findPersonById(Long id);
-
-    Client findPersonByName(String name);
+    List<T> findAllPersons();
 
     
 }

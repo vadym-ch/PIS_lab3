@@ -14,7 +14,7 @@ import com.example.lab3.entities.Client;
 
 @Component
 public class Runner implements CommandLineRunner {
-    @Autowired
+    @Autowired //
     private ClientDaoImpl dao;
     @Autowired
     private ShipDaoImpl shipdao;
@@ -26,25 +26,25 @@ public class Runner implements CommandLineRunner {
        
         dao.findAllPersons().forEach(System.out::println);
 
-        // Client cl1 = new Client("last-dance", "Adam", "Driver");
-        // dao.createPerson(cl1);
-        // Client cl2 = new Client("3roberto3", "Robert", "Deniro");
-        // dao.createPerson(cl2);
-        // Client cl3 = new Client("lil-friend", "Al", "Pachino");
-        // dao.createPerson(cl3);
-        // System.out.println("\n----- Added 3 new clients to the system -----\n");
+        Client cl1 = new Client("last-dance", "Adam", "Driver");
+        dao.createPerson(cl1);
+        Client cl2 = new Client("3roberto3", "Robert", "Deniro");
+        dao.createPerson(cl2);
+        Client cl3 = new Client("lil-friend", "Al", "Pachino");
+        dao.createPerson(cl3);
+        System.out.println("\n----- Added 3 new clients to the system -----\n");
     
-        // dao.findAllPersons().forEach(System.out::println);
+        dao.findAllPersons().forEach(System.out::println);
 
-        // dao.deletePerson(cl1);
+        dao.deletePerson(cl1);
 
-        // cl2.setUsername("roberto_the_best");;
-        // dao.updatePerson(cl2);
+        cl2.setUsername("roberto_the_best");;
+        dao.updatePerson(cl2);
 
-        // System.out.println("\n----- Deleted Adam and changed Robert's username -----\n");
+        System.out.println("\n----- Deleted Adam and changed Robert's username -----\n");
         
-        // dao.findAllPersons().forEach(System.out::println);
-        // System.out.println();
+        dao.findAllPersons().forEach(System.out::println);
+        System.out.println();
 
 
         System.out.println("\n----- List of existing ships -----\n");

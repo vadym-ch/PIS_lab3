@@ -11,7 +11,7 @@ public interface ShipDao {
 
     void updateShip(Ship ship);
 
-    List findAllShips();
+    List<Ship> findAllShips();
 
     Ship  findShipById(Long id);
 

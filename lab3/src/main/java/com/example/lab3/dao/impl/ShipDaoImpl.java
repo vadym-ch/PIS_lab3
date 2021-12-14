@@ -25,7 +25,7 @@ public class ShipDaoImpl implements ShipDao {
 
 
     @Override
-    public List findAllShips() {
+    public List<Ship> findAllShips() {
 
         return entityManager.createQuery("select sh from Ship sh").getResultList();
     }

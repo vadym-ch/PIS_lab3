@@ -17,14 +17,8 @@ import lombok.ToString;
 public class Ship {
     @Id
     @GeneratedValue( strategy= GenerationType.IDENTITY )
-    @Getter
-    @Setter
     protected Long id;
-    @Getter
-    @Setter
     protected String sobriquet;
-    @Getter
-    @Setter
     protected Integer passCapacity;
     
     public Ship(String sobriquet, Integer passCapacity){
